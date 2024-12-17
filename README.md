@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chat Analyzer
+**Project Description** : The Chat Analyzer is a web application built using Next.js, which allows users to upload their WhatsApp chat exports (in .txt format), analyze the contents using Gemini AI, and categorize them into predefined themes. Additionally, it displays a word cloud of the most frequent words from the chat using react-tagcloud.
 
-## Getting Started
+# Tech Stack
 
-First, run the development server:
+Next.js: React framework with server-side rendering.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+react-tagcloud: A React component to display a word cloud of frequent words.
+
+TailwindCSS: For styling.
+
+Google Gemini API: For content analysis and categorization of chat messages.
+
+# Features
+
+- Chat Upload: Allows users to upload .txt files containing their WhatsApp chat export.
+
+- Content Categorization: Categorizes the chat content into different themes using Gemini AI or other models.
+
+- Word Cloud: Displays a word cloud showing the most frequent words in the chat.
+
+# Setup
+
+1. Clone the repository.
+
+2. Install the dependencies using `pnpm install`.
+
+3. Create a `.env` file in the root directory and add the following environment variables:
+
+```
+GEMINI_API_KEY=YOUR_API_KEY
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Run the development server using `pnpm run dev`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+5. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
