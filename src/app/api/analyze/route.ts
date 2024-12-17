@@ -41,6 +41,7 @@ Chat Data: ${body.chat}`;
       body: res.response.text(),
     });
   } catch (error) {
+    console.log(error)
     return NextResponse.json({
       status: 500,
       body: "Internal server error",
