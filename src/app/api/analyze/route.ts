@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+export const runtime = "edge";
 export async function POST(req: NextRequest) {
   try {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
@@ -41,7 +42,7 @@ Chat Data: ${body.chat}`;
       body: res.response.text(),
     });
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return NextResponse.json({
       status: 500,
       body: "Internal server error",
